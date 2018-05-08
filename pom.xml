@@ -9,7 +9,7 @@
 
     <name>nar-demo</name>
     <url>https://github.com/shiluotang/nar-demo</url>
-	<description>Maven NAR plugin demo</description>
+    <description>Maven NAR plugin demo</description>
 
     <scm>
         <connection>scm:git:git@github.com:shiluotang/nar-demo.git</connection>
@@ -83,11 +83,11 @@
 
     <build>
         <plugins>
-			<plugin>
-				<groupId>external.atlassian.jgitflow</groupId>
-				<artifactId>jgitflow-maven-plugin</artifactId>
-				<version>1.0-m5.1</version>
-			</plugin>
+            <plugin>
+                <groupId>com.manamind.jgitflow</groupId>
+                <artifactId>jgitflow-maven-plugin</artifactId>
+                <version>1.0.0</version>
+            </plugin>
         </plugins>
     </build>
 
