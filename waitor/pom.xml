@@ -36,6 +36,12 @@
             <type>nar</type>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.scijava</groupId>
+            <artifactId>native-lib-loader</artifactId>
+            <version>2.2.0</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -45,6 +51,25 @@
                 <artifactId>nar-maven-plugin</artifactId>
                 <version>3.5.2</version>
                 <extensions>true</extensions>
+                <configuration>
+                    <libraries>
+                        <library>
+                            <type>shared</type>
+                            <narSystemPackage>org.sqg.jni</narSystemPackage>
+                            <linkCPP>false</linkCPP>
+                        </library>
+                        <library>
+                            <type>static</type>
+                            <narSystemPackage>org.sqg.jni</narSystemPackage>
+                            <linkCPP>false</linkCPP>
+                        </library>
+                        <library>
+                            <type>jni</type>
+                            <narSystemPackage>org.sqg.jni</narSystemPackage>
+                            <linkCPP>false</linkCPP>
+                        </library>
+                    </libraries>
+                </configuration>
             </plugin>
         </plugins>
     </build>
