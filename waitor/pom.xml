@@ -49,6 +49,7 @@
             <type>nar</type>
             <scope>runtime</scope>
         </dependency>
+
         <dependency>
             <groupId>org.scijava</groupId>
             <artifactId>native-lib-loader</artifactId>
@@ -64,6 +65,21 @@
                 <artifactId>nar-maven-plugin</artifactId>
                 <version>3.5.2</version>
                 <extensions>true</extensions>
+                <configuration>
+                    <targetDirectory>${project.build.outputDirectory}</targetDirectory>
+                    <testTargetDirectory>${project.build.outputDirectory}</testTargetDirectory>
+                    <!--
+                    <unpackDirectory>${project.build.outputDirectory}</unpackDirectory>
+                    <testUnpackDirectory>${project.build.outputDirectory}</testUnpackDirectory>
+                    -->
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>nar-assembly</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
 
             <plugin>
