@@ -8,7 +8,14 @@
     <packaging>pom</packaging>
 
     <name>nar-demo</name>
-    <url>http://maven.apache.org</url>
+    <url>https://github.com/shiluotang/nar-demo</url>
+	<description>Maven NAR plugin demo</description>
+
+    <scm>
+        <connection>scm:git:git@github.com:shiluotang/nar-demo.git</connection>
+        <developerConnection>scm:git:git@github.com:shiluotang/nar-demo.git</developerConnection>
+        <url>https://github.com/shiluotang/nar-demo</url>
+    </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -35,10 +42,63 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
     <modules>
         <module>hello-api</module>
         <module>hello-native</module>
         <module>hello-java</module>
         <module>waitor</module>
     </modules>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>2.9</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>2.19.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.10.3</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <version>2.5</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>2.17</version>
+            </plugin>
+        </plugins>
+    </reporting>
+
+    <build>
+        <plugins>
+			<plugin>
+				<groupId>external.atlassian.jgitflow</groupId>
+				<artifactId>jgitflow-maven-plugin</artifactId>
+				<version>1.0-m5.1</version>
+			</plugin>
+        </plugins>
+    </build>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>local-archiva-snapshots</id>
+            <url>http://localhost:8080/repository/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>local-archiva-internal</id>
+            <url>http://localhost:8080/repository/internal</url>
+        </repository>
+    </distributionManagement>
 </project>
