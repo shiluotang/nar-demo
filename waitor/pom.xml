@@ -66,11 +66,9 @@
                 <extensions>true</extensions>
                 <configuration>
                     <targetDirectory>${project.build.outputDirectory}</targetDirectory>
-                    <testTargetDirectory>${project.build.outputDirectory}</testTargetDirectory>
-                    <!--
-                    <unpackDirectory>${project.build.outputDirectory}</unpackDirectory>
-                    <testUnpackDirectory>${project.build.outputDirectory}</testUnpackDirectory>
-                    -->
+                    <testTargetDirectory>${project.build.testOutputDirectory}</testTargetDirectory>
+                    <unpackDirectory>${project.build.directory}/nar</unpackDirectory>
+                    <testUnpackDirectory>${project.build.directory}test-nar</testUnpackDirectory>
                 </configuration>
                 <executions>
                     <execution>
