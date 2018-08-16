@@ -4,11 +4,11 @@
     <parent>
         <groupId>org.sqg</groupId>
         <artifactId>nar-demo</artifactId>
-        <version>1.0</version>
+        <version>1.1</version>
     </parent>
     <groupId>org.sqg</groupId>
     <artifactId>waitor</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
     <name>waitor</name>
     <url>http://maven.apache.org</url>
     <properties>
@@ -31,7 +31,7 @@
         <dependency>
             <groupId>org.sqg</groupId>
             <artifactId>hello-api</artifactId>
-            <version>1.0</version>
+            <version>1.1</version>
         </dependency>
         <!--
         <dependency>
@@ -44,7 +44,7 @@
         <dependency>
             <groupId>org.sqg</groupId>
             <artifactId>hello-native</artifactId>
-            <version>1.0</version>
+            <version>1.1</version>
             <type>nar</type>
             <scope>runtime</scope>
         </dependency>
@@ -66,11 +66,9 @@
                 <extensions>true</extensions>
                 <configuration>
                     <targetDirectory>${project.build.outputDirectory}</targetDirectory>
-                    <testTargetDirectory>${project.build.outputDirectory}</testTargetDirectory>
-                    <!--
-                    <unpackDirectory>${project.build.outputDirectory}</unpackDirectory>
-                    <testUnpackDirectory>${project.build.outputDirectory}</testUnpackDirectory>
-                    -->
+                    <testTargetDirectory>${project.build.testOutputDirectory}</testTargetDirectory>
+                    <unpackDirectory>${project.build.directory}/nar</unpackDirectory>
+                    <testUnpackDirectory>${project.build.directory}test-nar</testUnpackDirectory>
                 </configuration>
                 <executions>
                     <execution>
