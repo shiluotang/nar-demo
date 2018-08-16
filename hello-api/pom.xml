@@ -4,11 +4,11 @@
     <parent>
         <groupId>org.sqg</groupId>
         <artifactId>nar-demo</artifactId>
-        <version>1.2-SNAPSHOT</version>
+        <version>1.1.1</version>
     </parent>
     <groupId>org.sqg</groupId>
     <artifactId>hello-api</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.1.1</version>
     <name>hello-api</name>
     <url>http://maven.apache.org</url>
     <properties>
