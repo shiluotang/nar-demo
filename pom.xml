@@ -4,7 +4,7 @@
 
     <groupId>org.sqg</groupId>
     <artifactId>nar-demo</artifactId>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
     <packaging>pom</packaging>
 
     <name>nar-demo</name>
@@ -91,6 +91,7 @@
         </plugins>
     </build>
 
+    <!--
     <distributionManagement>
         <snapshotRepository>
             <id>local-archiva-snapshots</id>
@@ -101,4 +102,5 @@
             <url>http://localhost:8080/repository/internal</url>
         </repository>
     </distributionManagement>
+    -->
 </project>
