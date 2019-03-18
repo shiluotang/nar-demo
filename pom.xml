@@ -91,6 +91,7 @@
         </plugins>
     </build>
 
+    <!--
     <distributionManagement>
         <snapshotRepository>
             <id>local-archiva-snapshots</id>
@@ -101,4 +102,5 @@
             <url>http://localhost:8080/repository/internal</url>
         </repository>
     </distributionManagement>
+    -->
 </project>
