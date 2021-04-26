@@ -19,7 +19,7 @@ public class AppTest {
      * Rigourous Test :-)
      */
     @Test
-    public void testApp() {
+    public void testApp() throws Exception {
         try (HelloEngine engine = HelloEngineProvider.provider().newEngine()) {
             Assert.assertEquals("NATIVE", HelloEngineProvider.provider().getVendorName());
             Assert.assertEquals("Hi, Bruce!", engine.greetings("Bruce"));
