@@ -63,19 +63,6 @@
             <plugin>
                 <groupId>com.github.maven-nar</groupId>
                 <artifactId>nar-maven-plugin</artifactId>
-                <configuration>
-                    <targetDirectory>${project.build.outputDirectory}</targetDirectory>
-                    <testTargetDirectory>${project.build.testOutputDirectory}</testTargetDirectory>
-                    <unpackDirectory>${project.build.directory}/nar</unpackDirectory>
-                    <testUnpackDirectory>${project.build.directory}/test-nar</testUnpackDirectory>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>nar-assembly</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
 
             <plugin>

@@ -142,6 +142,19 @@
                     <artifactId>nar-maven-plugin</artifactId>
                     <version>${nar-maven-plugin.version}</version>
                     <extensions>true</extensions>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>nar-assembly</goal>
+                            </goals>
+                            <configuration>
+                                <targetDirectory>${project.build.outputDirectory}</targetDirectory>
+                                <testTargetDirectory>${project.build.testOutputDirectory}</testTargetDirectory>
+                                <unpackDirectory>${project.build.directory}/nar</unpackDirectory>
+                                <testUnpackDirectory>${project.build.directory}/test-nar</testUnpackDirectory>
+                            </configuration>
+                        </execution>
+                    </executions>
                 </plugin>
                 <plugin>
                     <groupId>com.manamind.jgitflow</groupId>
